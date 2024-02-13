@@ -5,34 +5,46 @@ public class SmartTv {
 
     public void ligar(){
         ligada = true;
+        System.out.println("TV ligada? Sim");
     }
 
     public void desligar(){
         ligada = false;
+        System.out.println("TV ligada? Não");
     }
 
     public void aumentarVolume(){
-        volume++;
-        System.out.println("Volume atual: " + volume);
+        if (ligada) {
+            volume++;
+            System.out.println("Volume atual: " + volume);
+        }
     }
 
     public void diminuirVolume(){
-        volume--;
-        System.out.println("Volume atual: " + volume);
+        if (ligada) {
+            volume--;
+            System.out.println("Volume atual: " + volume);
+        }
     }
 
     public void subirCanal(){
-        canal++;
-        System.out.println("Canal atual: " + canal);
+        if (ligada) {
+            canal++;
+            System.out.println("Canal atual: " + canal);
+        }
     }
 
     public void descerCanal(){
-        canal--;
-        System.out.println("Canal atual: " + canal);
+        if (ligada) {
+            canal--;
+            System.out.println("Canal atual: " + canal);
+        }
     }
 
     public void definirCanal(int canalAlvo){
-        canal = canalAlvo;
-        System.out.println("Canal atual: " + canal);
+        if (ligada) {
+            canal = canalAlvo;
+            System.out.println("Canal atual: " + canal);
+        }
     }
 }

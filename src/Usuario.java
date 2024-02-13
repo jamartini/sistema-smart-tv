@@ -3,22 +3,17 @@ public class Usuario {
         
         SmartTv smartTv = new SmartTv();
 
-        if (smartTv.ligada) {
-            System.out.println("TV ligada? Sim");
-        }
-        else {
-            System.out.println("TV ligada? Não");
-        }    
-        System.out.println("Canal atual: " + smartTv.canal);
-        System.out.println("Volume atual: " + smartTv.volume);
-
         smartTv.ligar();
+
         if (smartTv.ligada) {
-            System.out.println("TV ligada? Sim");
+            System.out.println("Canal atual: " + smartTv.canal);
+            System.out.println("Volume atual: " + smartTv.volume);
         }
         else {
             System.out.println("TV ligada? Não");
         }
+
+//        smartTv.ligar();
 
         smartTv.aumentarVolume();
         smartTv.aumentarVolume();
